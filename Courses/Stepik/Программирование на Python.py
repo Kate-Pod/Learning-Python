@@ -146,6 +146,12 @@ print (a)
 в остальных случаях вывести это число обратно на консоль в отдельной строке.
 
 n = 0
+while n <= 100:
+    n = int(input())
+    if 10 <= n <= 100:
+        print(n)
+Или:
+n = 0
 while n<=100:
   n = int (input())
   if n > 100:
@@ -153,7 +159,5 @@ while n<=100:
   if n<10:
     continue
   print(n)
-
-
 
 
