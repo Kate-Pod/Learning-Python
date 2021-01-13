@@ -3,3 +3,26 @@
 print(len(set(input().split())))
 
 2. # Количество совпадающих чисел
+Даны два списка чисел. Посчитайте, сколько чисел содержится одновременно как в первом списке, так и во втором.
+print(len(set(input().split()) & set(input().split())))
+
+3. # Пересечение множеств
+Даны два списка чисел. Найдите все числа, которые входят как в первый, так и во второй список и выведите их в порядке возрастания.
+A=set(input().split())
+B=set(input().split())
+print(*sorted((A&B), key=int))
+
+или
+
+print(*sorted(set(input().split()) & set(input().split()), key=int))
+
+4. # Встречалось ли число раньше
+Во входной строке записана последовательность чисел через пробел. Для каждого числа выведите слово YES (в отдельной строке), если это число ранее встречалось в последовательности или NO, если не встречалось.
+numbers = [int(s) for s in input().split()]
+occur_before = set()
+for num in numbers:
+    if num in occur_before:
+        print('YES')
+    else:
+        print('NO')
+        occur_before.add(num)
