@@ -95,5 +95,10 @@ def remove_all_before(items: list, border: int) -> Iterable:
 ```
 #### 7. All Upper I
 Are all symbols in upper case?
-
-
+```
+def is_all_upper(text: str) -> bool:
+    if text==text.upper() or text ==' ':
+        return True
+    else:
+        return False
+```
