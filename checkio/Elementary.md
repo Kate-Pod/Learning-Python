@@ -102,3 +102,5 @@ def is_all_upper(text: str) -> bool:
     else:
         return False
 ```
+#### 8. Replace First
+The first element should become the last one
