@@ -11,7 +11,7 @@ def first_word(text: str) -> str:
     else:
         return text
 ```
-#### 2.Acceptable Password I
+#### 2. Acceptable Password I
 In this mission, you need to create a password verification function. The verification condition is:the length should be bigger than 6.
 ```
 def is_acceptable_password(password: str) -> bool:
@@ -46,13 +46,11 @@ def end_zeros(num: int) -> int:
    return i
 ```
 #### best:
-4.1) 
 ```
 def end_zeros(number):
     n = str(number)
     return len(n) - len(n.strip('0'))
 ```
-4.2) 
 ```
 def end_zeros(number):
     result = not number
@@ -61,13 +59,11 @@ def end_zeros(number):
         result += 1
     return result
 ```
-4.3) 
 ```
 import re
 def end_zeros(num: int) -> int:
     return len(re.search('0*$', str(num)).group(0))
 ```
-
 ```
 def end_zeros(num: int) -> int:
     count = 0 if num != 0 else 1
