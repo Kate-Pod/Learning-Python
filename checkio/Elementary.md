@@ -1,5 +1,5 @@
-### 1. First Word
-#### You are given a string and you have to find its first word.
+#### 1. First Word
+You are given a string and you have to find its first word.
 ```
 def first_word(text: str) -> str:
     """
@@ -11,8 +11,8 @@ def first_word(text: str) -> str:
     else:
         return text
 ```
-### 2.Acceptable Password I
-#### In this mission, you need to create a password verification function. The verification condition is:the length should be bigger than 6.
+#### 2.Acceptable Password I
+In this mission, you need to create a password verification function. The verification condition is:the length should be bigger than 6.
 ```
 def is_acceptable_password(password: str) -> bool:
     if len(password)>6:
@@ -20,15 +20,15 @@ def is_acceptable_password(password: str) -> bool:
     else:
       return False
 ```
-### 3.Number Length
-#### You have a positive integer. Try to find out how many digits it has?
+#### 3. Number Length
+You have a positive integer. Try to find out how many digits it has?
 ```
 def number_length(a: int) -> int:
     s=str(a)
     return len(s)
 ```
-### 4.End Zeros
-#### How many zeros are at the end?
+#### 4. End Zeros
+How many zeros are at the end?
 #### мой:
 ```
 def end_zeros(num: int) -> int:
