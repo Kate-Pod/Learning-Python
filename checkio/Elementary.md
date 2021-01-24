@@ -72,3 +72,9 @@ def end_zeros(num: int) -> int:
         num //= 10
     return count
 ```
+#### 5. Backward String
+Reverse a string
+```
+def backward_string(val: str) -> str:
+    return val[::-1]
+```
