@@ -104,3 +104,11 @@ def is_all_upper(text: str) -> bool:
 ```
 #### 8. Replace First
 The first element should become the last one
+```
+def replace_first(items: list) -> Iterable:
+    if items.__len__()<=1:
+        return items
+    else:  
+        items.append(items.pop(0))
+        return items
+```
