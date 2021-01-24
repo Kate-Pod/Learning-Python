@@ -1,3 +1,4 @@
+В формате md для разнообразия и удобства чтения.
 #### 1. First Word
 You are given a string and you have to find its first word.
 ```
