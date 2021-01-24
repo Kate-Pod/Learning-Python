@@ -78,3 +78,19 @@ Reverse a string
 def backward_string(val: str) -> str:
     return val[::-1]
 ```
+#### 6. Remove All Before
+Remove all the elements before the given one from the array.
+```
+def remove_all_before(items: list, border: int) -> Iterable:
+   try:
+      ind=items.index(border)
+      for i in range(0,ind):
+         items.pop(0)
+      return items
+   except:
+      return items
+```
+#### 7. All Upper I
+Are all symbols in upper case?
+
+
