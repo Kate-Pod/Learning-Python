@@ -1,6 +1,6 @@
 # 1.First Word
 ## You are given a string and you have to find its first word.
-
+```
 def first_word(text: str) -> str:
     """
         returns the first word in a given text.
@@ -10,7 +10,7 @@ def first_word(text: str) -> str:
         return text[0:s]
     else:
         return text
-
+```
 # 2.Acceptable Password I
 ## In this mission, you need to create a password verification function. The verification condition is:the length should be bigger than 6.
 def is_acceptable_password(password: str) -> bool:
