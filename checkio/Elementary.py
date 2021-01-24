@@ -1,6 +1,6 @@
 # First Word
-You are given a string and you have to find its first word.
-```
+'You are given a string and you have to find its first word.'
+
 def first_word(text: str) -> str:
     """
         returns the first word in a given text.
@@ -10,4 +10,4 @@ def first_word(text: str) -> str:
         return text[0:s]
     else:
         return text
-```
+
