@@ -1,4 +1,4 @@
-**Здесь представлены мои решения с сайта py.checkio (https://py.checkio.org/user/Kate-Pod/)**
+**Здесь представлены мои решения с сайта py.checkio (https://py.checkio.org/user/Kate-Pod/)**  
 *В формате md для разнообразия и удобства чтения.*
 
 #### 1. First Word
