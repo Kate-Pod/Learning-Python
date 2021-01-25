@@ -112,3 +112,19 @@ def replace_first(items: list) -> Iterable:
         items.append(items.pop(0))
         return items
 ```
+#### 9. Max Digit
+```
+def max_digit(number: int) -> int:
+    return int(max(str(number)))
+```
+#### 10. Split Pairs
+```
+def split_pairs(a):
+    n=2
+    b=[a[i:i+n] for i in range(0, len(a), n)]
+    if len(a)%2==0:
+        return [a[i:i+n] for i in range(0, len(a), n)]
+    else:
+        b.append(b.pop()+'_')
+        return b
+```
