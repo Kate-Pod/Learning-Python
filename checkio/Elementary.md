@@ -118,6 +118,7 @@ def max_digit(number: int) -> int:
     return int(max(str(number)))
 ```
 #### 10. Split Pairs
+Split the string into pairs of two characters.
 ```
 def split_pairs(a):
     n=2
