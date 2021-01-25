@@ -119,6 +119,7 @@ def max_digit(number: int) -> int:
 ```
 #### 10. Split Pairs
 Split the string into pairs of two characters.
+**мое:**
 ```
 def split_pairs(a):
     n=2
@@ -128,4 +129,16 @@ def split_pairs(a):
     else:
         b.append(b.pop()+'_')
         return b
+```
+**best:**
+```
+def split_pairs(a):
+    return [ch1+ch2 for ch1,ch2 in zip(a[::2],a[1::2]+'_')]
+```
+```
+from textwrap import wrap
+
+def split_pairs(a):
+    a = a + '_' if len(a) % 2 else a
+    return wrap(a, 2)
 ```
