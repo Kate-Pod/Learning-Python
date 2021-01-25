@@ -142,3 +142,9 @@ def split_pairs(a):
     a = a + '_' if len(a) % 2 else a
     return wrap(a, 2)
 ```
+#### 11. Beginning Zeros
+How many zero digits ("0") are at the beginning of the given string?
+```
+def beginning_zeros(number: str) -> int:
+    return(len(number)-len(number.lstrip('0')))
+```
