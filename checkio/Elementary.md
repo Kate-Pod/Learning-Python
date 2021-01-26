@@ -154,3 +154,33 @@ Find the nearest value to the given one
 def nearest_value(values, one):
     return min(values, key=lambda x: (abs(x - one), x))
 ```
+#### 13. Between Markers (simplified)
+find a substring between markers
+```
+def between_markers(text: str, begin: str, end: str) -> str:
+    """
+        returns substring between two given markers
+    """
+    ind1=text.find(begin)
+    ind2=text.find(end)
+    return text[ind1+1:ind2]
+```
+#### 14. Correct Sentence
+Sentences should always begin with a capital letter and end with a dot.
+```
+def correct_sentence(text: str) -> str:
+    """
+        returns a corrected sentence which starts with a capital letter
+        and ends with a dot.
+    """
+    text=text[0].upper()+text[1:]
+    if text[len(text)-1]!='.':
+        text=text+'.'
+    return text
+```    
+#### 15. Is Even
+Check if the given number is even or not.
+```
+def is_even(num: int) -> bool:
+    return num%2==0
+```
