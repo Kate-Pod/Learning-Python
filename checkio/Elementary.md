@@ -148,3 +148,9 @@ How many zero digits ("0") are at the beginning of the given string?
 def beginning_zeros(number: str) -> int:
     return(len(number)-len(number.lstrip('0')))
 ```
+#### 12. Nearest Value
+Find the nearest value to the given one
+```
+def nearest_value(values, one):
+    return min(values, key=lambda x: (abs(x - one), x))
+```
