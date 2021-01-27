@@ -5,7 +5,7 @@ def sum_numbers(text: str) -> int:
     return sum(int(i) for i in text.split() if i.isdigit())
 ```
 
-#### 1. Sum Numbers
+#### 2. Even The Last
 How to work with arrays indexes.
 ```
 def checkio(array: list) -> int:
@@ -24,3 +24,6 @@ def checkio(array: list) -> int:
     result = sum([num for num in array[::2]]) * array[-1] if array else 0
     return result
 ```
+
+#### 3. Right to Left
+You are given a sequence of strings. You should join these strings into a chunk of text where the initial strings are separated by commas. As a joke on the right handed robots, you should replace all cases of the words "right" with the word "left", even if it's a part of another word. All strings are given in lowercase.
