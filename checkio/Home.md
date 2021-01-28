@@ -27,3 +27,24 @@ def checkio(array: list) -> int:
 
 #### 3. Right to Left
 You are given a sequence of strings. You should join these strings into a chunk of text where the initial strings are separated by commas. As a joke on the right handed robots, you should replace all cases of the words "right" with the word "left", even if it's a part of another word. All strings are given in lowercase.
+```
+def left_join(phrases: tuple) -> str:
+    """
+        Join strings and replace "right" to "left"
+    """
+    return (','.join(phrases)).replace('right','left')
+```
+#### 4. Right to Left
+How to discern words and numbers.
+```
+def checkio(words: str) -> bool:
+    с = 0
+    for word in words.split():
+        if word.isalpha():
+            с += 1
+        else:
+            с = 0
+        if c == 3:
+            return True
+    return False
+```
