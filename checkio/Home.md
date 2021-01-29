@@ -79,3 +79,9 @@ def count_digits(text: str) -> int:
 def count_digits(text: str) -> int:
     return sum(c.isdigit() for c in text)
 ```
+#### 8. Backward Each Word
+Reverse every word in a given line
+```
+def backward_string_by_word(text: str) -> str:
+    return " ".join([i[::-1] for i in text.split(" ")])
+```
