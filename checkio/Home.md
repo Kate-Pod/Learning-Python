@@ -48,3 +48,20 @@ def checkio(words: str) -> bool:
             return True
     return False
 ```
+
+#### 5. First Word
+Find the first word in a string
+```
+def first_word(text: str) -> str:
+    t=text.replace('.' ,' ')
+    t1=t.replace(',',' ')
+    t2=t1.split()
+    return t2[0]
+```
+#### 6. Days Between
+How many days old are you? I’m 7,665, but my license says 14,600...
+```
+def days_diff(a, b):
+    import datetime
+    return abs((datetime.date(*a)-datetime.date(*b)).days)
+```
