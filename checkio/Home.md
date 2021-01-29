@@ -65,3 +65,12 @@ def days_diff(a, b):
     import datetime
     return abs((datetime.date(*a)-datetime.date(*b)).days)
 ```
+#### 7. Count Digits
+```
+def count_digits(text: str) -> int:
+    c=0
+    for i in list(text):
+        if i.isdigit():
+            c+=1
+    return c
+```
