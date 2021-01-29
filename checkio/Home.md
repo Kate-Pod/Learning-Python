@@ -74,3 +74,8 @@ def count_digits(text: str) -> int:
             c+=1
     return c
 ```
+**best:**
+```
+def count_digits(text: str) -> int:
+    return sum(c.isdigit() for c in text)
+```
