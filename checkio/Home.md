@@ -85,3 +85,7 @@ Reverse every word in a given line
 def backward_string_by_word(text: str) -> str:
     return " ".join([i[::-1] for i in text.split(" ")])
 ```
+#### 9. Bigger Price
+Find TOP most expensive goods.
+```
+
