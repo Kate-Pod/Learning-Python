@@ -88,4 +88,9 @@ def backward_string_by_word(text: str) -> str:
 #### 9. Bigger Price
 Find TOP most expensive goods.
 ```
-
+def bigger_price(limit: int, data: list) -> list:
+    """
+        TOP most expensive goods
+    """
+    return sorted(data, key=lambda x: x['price'], reverse=True) [:limit]
+```
