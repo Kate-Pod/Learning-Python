@@ -94,3 +94,30 @@ def bigger_price(limit: int, data: list) -> list:
     """
     return sorted(data, key=lambda x: x['price'], reverse=True) [:limit]
 ```
+#### 10. Between Markers
+find a substring between markers
+```
+def bigger_price(limit: int, data: list) -> list:
+    """
+def between_markers(text: str, begin: str, end: str) -> str:
+    """
+        returns substring between two given markers
+    """
+    if begin in text and end in text:
+        begind=text.find(begin)+len(begin)-1
+        endind=text.find(end)
+        return text[begind+1:endind]
+        if begind<endind:
+            return ''
+    if begin not in text and end in text:
+        endind=text.find(end)
+        return text[:endind]
+    if begin in text and end not in text:
+        begind=text.find(begin)+len(begin)
+        return text[begind:]
+    if begin and end not in text:
+        return text
+```
+
+
+
