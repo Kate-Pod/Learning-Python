@@ -118,6 +118,10 @@ def between_markers(text: str, begin: str, end: str) -> str:
     if begin and end not in text:
         return text
 ```
-
-
+**best:**
+```
+def between_markers(text: str, begin: str, end: str) -> str:
+    b, e = text.find(begin), text.find(end)
+    return text if b == e == -1 else text[:e] if b == -1 else text[b+len(begin):] if e == -1 else text[b+len(begin):e]    
+```
 
