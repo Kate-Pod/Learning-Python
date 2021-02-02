@@ -124,4 +124,13 @@ def between_markers(text: str, begin: str, end: str) -> str:
     b, e = text.find(begin), text.find(end)
     return text if b == e == -1 else text[:e] if b == -1 else text[b+len(begin):] if e == -1 else text[b+len(begin):e]    
 ```
-
+#### 11. Non-unique Elements
+Trim an array down to its non-unique elements
+```
+def checkio(data: list) -> list:
+    res = []
+    for i in data:
+        if data.count(i)>1:
+            res.append(i)
+    return res
+```
