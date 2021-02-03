@@ -155,3 +155,19 @@ def popular_words(text: str, words: list) -> dict:
     split = text.lower().split()
     return {w: split.count(w) for w in words}
 ```
+
+
+
+#### 13. Second Index
+```
+def second_index(text: str, symbol: str) -> [int, None]:
+    if text.count(symbol)<=2:
+        if text.count(symbol)>1:
+            r=text.rfind(symbol)
+        else:
+            r=None
+    else:
+        r=(text[:text.find(symbol)]+text[text.find(symbol)+1:]).find(symbol)+1
+
+    return r
+```
