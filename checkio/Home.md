@@ -139,3 +139,19 @@ def checkio(data: list) -> list:
 def checkio(data: list) -> list:
     return [n for n in data if data.count(n) > 1]
 ```
+#### 12. Popular Words
+Determine the words' popularity.
+```
+def popular_words(text: str, words: list) -> dict:
+    enddict={}
+    newt=text.lower().split()
+    for i in words:
+        enddict[i]=newt.count(i)
+    return enddict
+```
+**best:**
+```
+def popular_words(text: str, words: list) -> dict:
+    split = text.lower().split()
+    return {w: split.count(w) for w in words}
+```
