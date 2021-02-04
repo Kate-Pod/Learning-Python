@@ -171,3 +171,18 @@ def second_index(text: str, symbol: str) -> [int, None]:
 
     return r
 ```
+#### 14. Split List
+Split an array into two arrays.
+```
+def split_list(items: list) -> list:
+    from math import ceil,floor
+	items1=[]
+	items2=[]
+	if len(items)%2==0:
+		items1.extend(items[:int(len(items)/2)])
+		items2.extend(items[int(len(items)/2):])
+	else:
+		items1.extend(items[:ceil(len(items)/2)])
+		items2.extend(items[ceil(len(items)/2):])
+	return [items1]+[items2]
+```
