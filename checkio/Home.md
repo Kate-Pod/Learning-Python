@@ -186,3 +186,9 @@ def split_list(items: list) -> list:
 		items2.extend(items[ceil(len(items)/2):])
 	return [items1]+[items2]
 ```
+#### 15. All the Same
+Check if all elements are the same?
+```
+def all_the_same(elements: List[Any]) -> bool:
+    return elements.count(elements[0])==len(elements) if len(elements)!=0 else True
+```
