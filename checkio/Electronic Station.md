@@ -14,3 +14,10 @@ def checkio(number: int) -> int:
         a = a * n
     return a
 ```
+#### 3. Sort by Extension
+Sort the list by the file extension. The files with the same extension should be sorted by name. (example: ['1.cad', '1.bat', '.aa', '.bat'])
+```
+def sort_by_ext(files: List[str]) -> List[str]:
+    l= list(str(f).rsplit('.',1) for f in files)  #rsplit - разделим каждый элемент в списке по точке (.) справа только один раз ('1.aa.doc' --> '1.aa', 'doc')
+    return list('.'.join(a) for a in sorted(l, key = lambda x: (len(x[0])!= 0, x[1],x[0])))
+```
