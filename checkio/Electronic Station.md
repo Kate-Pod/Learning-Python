@@ -36,3 +36,11 @@ import re
 def is_acceptable_password(password: str) -> bool:
     return len(password)>6 and any([re.search(i,'0123456789') for i in password]) and not password.isdigit()
 ```
+#### 5. Acceptable Password III
+the length should be bigger than 6; should contain at least one digit, but it cannot consist of just digits; having numbers or containing just numbers does not apply to the password longer than 9. a string should not contain the word "password" in any case.
+```
+import re
+def is_acceptable_password(password: str) -> bool:
+    return len(password)>6 and any([re.search(i,'0123456789') for i in password]) and not password.isdigit() if len(password)<9 else True and not any([re.search('password',password,re.I)])
+```
+
