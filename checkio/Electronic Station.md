@@ -5,3 +5,12 @@ def words_order(text: str, words: list) -> bool:
     word_list = [text.index(word) for word in words if word in text.split()]      #порядок индексов, в котором встречаются слова words в text
     return sorted(word_list) == word_list and len(word_list) == len(set(words))   #set - в случае одинаковых слов в списке words
 ```
+#### 2. Digits Multiplication
+```
+def checkio(number: int) -> int:
+    ints = [int(i) for i in str(number) if i != '0'] 
+    a = 1
+    for n in ints: 
+        a = a * n
+    return a
+```
