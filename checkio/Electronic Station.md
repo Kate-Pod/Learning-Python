@@ -2,6 +2,6 @@
 You have a text and a list of words. You need to check if the words in a list appear in the same order as in the given text.
 ```
 def words_order(text: str, words: list) -> bool:
-  a = [x for x in text.split() if x in words]
-  return a == words and sorted(set(a)) == sorted(words)
+    word_list = [text.index(word) for word in words if word in text.split()]
+    return sorted(word_list) == word_list and len(word_list) == len(set(words))
 ```
