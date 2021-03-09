@@ -30,6 +30,10 @@ students.query("writing_score > @wrsc")
 #Отбор колонок/строк, содержащих определенные слова
 students.filter(like='score',axis=1)
 
-#Группировка
+#Группировка и сортировка
 students.groupby('gender').mean()
 students.groupby('gender', as_index=False).aggregate({'math_score': ['mean', 'count', 'std'],'reading_score': ['std', 'min', 'max']})
+students.sort_values(['gender', 'math_score'], ascending=True).groupby('gender').head(5)
+#Создание и удаление колонок
+students['total_score']=students.math_score+students.reading_score
+students.drop(['total_score'],axis=1]
