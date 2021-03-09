@@ -1,5 +1,5 @@
 import pandas as pd
-students =pd.read_csv('StudentsPerformance.csv')
+students =pd.read_csv('https://stepik.org/media/attachments/course/4852/StudentsPerformance.csv')
 students.head() #первые 5 строк
 students.describe() #основные описательные статистики
 
