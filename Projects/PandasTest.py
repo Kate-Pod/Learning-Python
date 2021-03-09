@@ -22,4 +22,5 @@ students=students.rename(columns={'parental level of education': 'parental_level
                                             'math score': 'math_score',
                                             'reading score': 'reading_score',
                                             'writing score': 'writing_score'})
-students.query("writing_score>74")
+#Пробуем query фильтрацию
+students.query("writing_score>74 & gender=='female'")
