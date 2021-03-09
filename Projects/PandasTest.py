@@ -24,3 +24,12 @@ students=students.rename(columns={'parental level of education': 'parental_level
                                             'writing score': 'writing_score'})
 #Пробуем query фильтрацию
 students.query("writing_score>74 & gender=='female'")
+wrsc=80
+students.query("writing_score > @wrsc")
+
+#Отбор колонок/строк, содержащих определенные слова
+students.filter(like='score',axis=1)
+
+#Группировка
+students.groupby('gender').mean()
+students.groupby('gender', as_index=False).aggregate({'math_score': ['mean', 'count', 'std'],'reading_score': ['std', 'min', 'max']})
