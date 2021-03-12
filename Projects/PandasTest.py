@@ -37,3 +37,16 @@ students.sort_values(['gender', 'math_score'], ascending=True).groupby('gender')
 #Создание и удаление колонок
 students['total_score']=students.math_score+students.reading_score
 students.drop(['total_score'],axis=1]
+
+              
+'''
+В dataframe с именем my_stat сохранены данные с 4 колонками: session_value, group, time, n_users.  
+В переменной session_value замените все пропущенные значения на нули.
+В переменной n_users замените все отрицательные значения на медианное значение переменной n_users (без учета отрицательных значений, разумеется)              
+'''    
+my_stat=my_stat.fillna('0')
+my_stat['session_value']=my_stat['session_value'].astype(float)
+M = my_stat[my_stat.n_users >= 0.0].n_users.median()
+my_stat.loc[my_stat['n_users'] < 0, 'n_users'] = M             
+              
+              
