@@ -48,5 +48,19 @@ my_stat=my_stat.fillna('0')
 my_stat['session_value']=my_stat['session_value'].astype(float)
 M = my_stat[my_stat.n_users >= 0.0].n_users.median()
 my_stat.loc[my_stat['n_users'] < 0, 'n_users'] = M             
+
+              
+              
+#Проанализируем набор данных о о действиях, которые совершают студенты на stepik
+events=pd.read_csv('event_data_train.csv') #['step_id', 'timestamp', 'action', 'user_id']
+events.head(10)
+events.action.unique() #как distinct в sql  
+events['date']=pd.to_datetime(events.timestamp, unit='s') #добавим столбец с датой в формате yyyy-mm-dd hh:mm:ss
+events['day']=events.date.dt.date #yyyy-mm-dd    
+events.pivot_table(index='user_id', columns='action', values='step_id', agg_func='count', fill_value=0).head() #посмотрим, сколько студентов "discovered","passed","started", "viewed" степ
+events[['user_id', 'day', ' timestamp']].drop_duplicates(subset=['user_id', 'day']).head() #удалим дубликаты в выделенных столбцах
+              
+              
+              
               
               
