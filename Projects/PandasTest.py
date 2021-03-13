@@ -57,7 +57,7 @@ events.head(10)
 events.action.unique() #как distinct в sql  
 events['date']=pd.to_datetime(events.timestamp, unit='s') #добавим столбец с датой в формате yyyy-mm-dd hh:mm:ss
 events['day']=events.date.dt.date #yyyy-mm-dd    
-events.pivot_table(index='user_id', columns='action', values='step_id', agg_func='count', fill_value=0).head() #посмотрим, сколько студентов "discovered","passed","started", "viewed" степ
+events.pivot_table(index='user_id', columns='action', values='step_id', aggfunc='count', fill_value=0).head() #посмотрим, сколько студентов "discovered","passed","started", "viewed" степ
 events[['user_id', 'day', ' timestamp']].drop_duplicates(subset=['user_id', 'day']).head() #удалим дубликаты в выделенных столбцах
               
               
