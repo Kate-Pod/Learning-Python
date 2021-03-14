@@ -28,3 +28,7 @@ useful_cols = ['Name', 'Platform', 'Year_of_Release', 'Genre',
                'User_Score', 'User_Count', 'Rating'
               ]
 df[useful_cols].head()
+
+#Построим график продаж видео игр в различных странах в зависимости от года. 
+sales_df = df[[x for x in df.columns if 'Sales' in x] + ['Year_of_Release']]
+sales_df.groupby('Year_of_Release').sum().plot()
