@@ -43,3 +43,10 @@ sns.distplot(df.Critic_Score) #распределение Critic score
 top_platforms = df.Platform.value_counts().sort_values(ascending = False).head(5).index.values
 sns.boxplot(y="Platform", x="Critic_Score", data=df[df.Platform.isin(top_platforms)], orient="h") #оценки игр от критиков для топ-5 крупнейших игровых платформ
 
+platform_genre_sales = df.pivot_table(
+                        index='Platform', 
+                        columns='Genre', 
+                        values='Global_Sales', 
+                        aggfunc=sum).fillna(0).applymap(float)
+sns.heatmap(platform_genre_sales, annot=True, fmt=".1f", linewidths=.5) #Визуализируем суммарные продажи игр по жанрам и игровым платформам
+
