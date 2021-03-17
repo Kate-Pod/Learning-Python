@@ -50,3 +50,41 @@ platform_genre_sales = df.pivot_table(
                         aggfunc=sum).fillna(0).applymap(float)
 sns.heatmap(platform_genre_sales, annot=True, fmt=".1f", linewidths=.5) #Визуализируем суммарные продажи игр по жанрам и игровым платформам
 
+#Построим line plot с динамикой числа вышедших игр и их продаж по годам.
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+import plotly
+import plotly.graph_objs as go
+
+# посчитаем число вышедших игр и проданных копий по годам
+years_df = df.groupby('Year_of_Release')[['Global_Sales']].sum().join(
+    df.groupby('Year_of_Release')[['Name']].count()
+)
+years_df.columns = ['Global_Sales', 'Number_of_Games']
+
+# создаем линию для числа проданных копий
+trace0 = go.Scatter(
+    x=years_df.index,
+    y=years_df.Global_Sales,
+    name='Global Sales'
+)
+
+# создаем линию для числа вышедших игр 
+trace1 = go.Scatter(
+    x=years_df.index,
+    y=years_df.Number_of_Games,
+    name='Number of games released'
+)
+
+# определяем массив данных и задаем title графика в layout
+data = [trace0, trace1]
+layout = {'title': 'Statistics of video games'}
+
+
+import cufflinks as cf
+init_notebook_mode(connected=True)
+cf.go_offline()
+
+# cоздаем объект Figure и визуализируем его
+fig = go.Figure(data=data, layout=layout)
+iplot(fig, show_link=False)
+plotly.offline.plot(fig, filename='years_stats.html', show_link=False)
